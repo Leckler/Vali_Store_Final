@@ -140,7 +140,7 @@ def Carrito(request):
 
 def agregar_producto(request, ID):
     carrito = Cart(request)
-    producto = Producto.objects.get(id_producto = ID)   #Estos eran crud que extraje de videos pero no pude aplicarlos
+    producto = Producto.objects.get(id_producto = ID)   #Estos eran crud que aprendi de videos pero no pude aplicarlos
     carrito.add(producto)                               #Al carrito en una ventana modal 
     return redirect("Fragmentos")
 
