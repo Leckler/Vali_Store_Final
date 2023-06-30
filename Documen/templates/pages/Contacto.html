@@ -1,0 +1,43 @@
+{% extends 'pages/Encabezado.html' %}
+
+{% block contenido %}
+
+<head>
+    <title>Contacto</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'documento/(CSS)/Contacto.css' %}">
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <div class="raw">
+            <div class="col-sm-12">
+                <h1 id="titulo">VALI STORE</h1>
+                <h2 id="aviso">Contacto</h2>
+            </div>
+        </div>
+        <div class="raw">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h4 id="numero">LLAMANOS AL 2 6782 7892</h4>
+                <h4 id="numero">¡Siguenos en nuestras multiples redes sociales!</h4>
+            </div>
+        </div>
+        <div class="raw" id="redes1">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <img src="{% static 'documento/IMG/whatsApp.png' %}" class="img-thumbnail" alt="...">
+                <img src="{% static 'documento/IMG/facebook.jpg' %}" class="img-thumbnail" alt="...">
+                <img src="{% static 'documento/IMG/linkdd.jpg' %}" class="img-thumbnail" alt="...">
+            </div>
+        </div>
+        <div class="raw">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" id="redes2">
+                <img src="{% static 'documento/IMG/logo instagram.jpg'%}" class="img-thumbnail" alt="...">
+                <img src="{% static 'documento/IMG/twitter.png' %}" class="img-thumbnail" alt="...">
+                <img src="{% static 'documento/IMG/youtube.jpg' %}" class="img-thumbnail" alt="...">
+            </div>
+        </div>
+    </div>
+    
+</body>
+{% endblock %}

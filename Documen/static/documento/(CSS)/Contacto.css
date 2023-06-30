@@ -1,0 +1,55 @@
+body{
+    background-image: url(../IMG/Imagen_fondo.jpg);
+}
+
+
+.nav-link{
+    color: white;
+}
+
+
+
+i{
+    margin-left: 50px;
+}
+
+.img-thumbnail{
+    height: 200px;
+    width: 200px;
+}
+
+#titulo{
+    text-align: center;
+    color: white;
+
+}
+
+#aviso{
+    text-align: center;
+    color:white;
+
+}
+
+#numero{
+    text-align: center;
+    color:white;
+    margin-top: 30px;
+
+}
+
+#redes1{
+    text-align: center;
+
+}
+
+
+#redes2{
+    text-align: center;
+
+}
+
+.container-fluid{
+    border-style: outset;
+    border-radius: 20px;
+    border-bottom: none;
+}

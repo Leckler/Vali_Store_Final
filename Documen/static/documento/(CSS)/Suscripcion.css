@@ -1,0 +1,29 @@
+body{
+    background-image: url(../IMG/Imagen_fondo.jpg);
+}
+
+.nav-link{
+    color: white;
+}
+
+i{
+    margin-left: 50px;
+}
+
+h2{
+    color:white;
+    text-align: center;
+}
+
+.form-group{
+    padding: 10px;
+}
+
+.container-fluid{
+    margin-top: 10px;
+}
+
+#imagen2{
+    margin-left: 10px;
+}
+

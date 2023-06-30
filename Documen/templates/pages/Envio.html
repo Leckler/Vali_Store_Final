@@ -1,0 +1,83 @@
+{% extends 'pages/Encabezado.html' %}
+
+{% block contenido %}
+<head>
+  <title>Envio</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'documento/(CSS)/Envio.css' %}">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="raw">
+            <legend>Datos personales</legend>
+            <form action="" method="">
+                <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                    <label for="pnombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" name="pnombre" id="pnombre" 
+                    placeholder="Ingrese nombre" required>
+                    <div id="VerifyN" class="error">Este campo no puede estar vacio</div>
+                </div>
+                <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                    <label for="apaterno" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" name="apaterno" id="apaterno"
+                    placeholder="Ingrese apellido" required>
+                    <div id="VerifyA" class="error">Este campo no puede estar vacio</div>
+                </div>
+                <div class="form-group col-sm-12 col-md-9">
+                    <label for="correo" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" name="correo" id="correo"
+                    placeholder="Ingrese correo electronico" required>
+                    <div id="VerifyE" class="error">Correo debe ser alfanumerico e incluir @</div>
+                </div>
+                <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="tel" class="form-control" name="telefono" id="telefono"
+                    placeholder="Ingrese telefono celular +56" required>
+                    <div id="VerifyT" class="error">Telefono debe tener 9 digitos</div>
+                </div>
+            </form>
+        </div>
+        <div id="espacio"></div>
+        <div class="raw">
+            <legend>Datos de envio</legend>
+            <form action="" method="">
+                <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                    <label for="direccion" class="form-label">Direccion</label>
+                    <input type="text" class="form-control" name="direccion" id="direccion" 
+                    placeholder="Ingrese direccion hogar" required>
+                    <div id="VerifyD" class="error">Este campo no puede estar vacio</div>
+                </div>
+                <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                    <label for="optRegion">Region</label>
+                    <select class="form-select" name="optRegion" id="optRegion" required>
+                        <optgroup label="Regiones">
+                            <option value="">Seleccione Region</option>
+                        </optgroup>
+                    </select>
+                    <div id="VerifyR" class="error">*Obligatorio</div>
+                </div>
+                <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                    <label for="optComuna">Comuna</label>
+                    <select class="form-select" name="optComuna" id="optComuna" required>
+                        <optgroup label="Comunas">
+                            <option value="">Seleccione Comuna</option>
+                        </optgroup>
+                    </select>
+                    <div id="VerifyC" class="error">*Obligatorio</div>
+                </div>
+                <div class="form-group col-sm-9 col-md-8 col-xl-7">
+                    <label for="mensaje">Informacion Adicional [Opcional]</label>
+                    <textarea class="form-control" id="mensaje" rows="3"></textarea>
+                </div>
+                <div class="form-group col-sm">
+                    <input class="btn btn-primary" type="button" name="EnviarP" value="Enviar Producto" id="EnviarP">
+                    <i class="bi bi-house-check"></i>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src= "{% static 'documento/(Jquery)/Envio.js' %}"></script>
+{% endblock %}

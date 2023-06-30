@@ -1,0 +1,29 @@
+body{
+    background-image: url(../IMG/Imagen_fondo.jpg);
+}
+
+
+.nav-link{
+    color: white;
+}
+
+
+
+i{
+    margin-left: 50px;
+}
+
+#registro{
+    color: white;
+}
+
+#dato{
+    color:whitesmoke;
+    font-style: oblique;
+}
+
+#tablaR{
+    margin-top: 50px;
+    color:white;
+    font-style: oblique;
+}

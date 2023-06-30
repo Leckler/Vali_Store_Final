@@ -1,0 +1,45 @@
+{% extends 'pages/Encabezado2.html' %}
+
+{% block contenido1 %}
+<head>
+  <title>Home</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'documento/(CSS)/Home.css' %}">
+</head>
+<body>
+  <div class="container-fluid">
+    <div>
+      <h2>¡BIENVENIDO A LA MEJOR TIENDA DE MASCOTAS DE LA CIUDAD!</h2>
+    </div>
+    <div class="row" id="columna1">
+      <div class="col-sm-6 col-md-5 col-lg-4 col-xl-4" id="carta1">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static 'documento/IMG/Image_perro.jpg' %}" class="card-img-top" alt="..." id="imagen1">
+          <div class="card-body">
+            <h5 class="card-title">Perritos</h5>
+            <p class="card-text">Tenemos las mejores correas para el mejor amigo del hombre</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-5 col-lg-4 col-xl-4" id="carta1">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static 'documento/IMG/imagen_gato.jpg' %}" class="card-img-top" alt="..." id="imagen1">
+          <div class="card-body">
+            <h5 class="card-title">Gatitos</h5>
+            <p class="card-text">Tenemos juguetes para el que ronronea y te muerde</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-5 col-lg-4 col-xl-4" id="carta1">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static 'documento/IMG/signo_mas.jpg' %}" class="card-img-top" alt="..." id="imagen1">
+          <div class="card-body">
+            <h5 class="card-title">+mas</h5>
+            <p class="card-text">y mucho mucho mas porque tu mascota se lo merece</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'pages/Encabezado.html' %}
+
+{% block contenido %}
+
+<head>
+    <title>Seccion Pago</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'documento/(CSS)/Pago.css' %}">
+</head>
+
+<div class="container-fluid">
+    <div class="raw">
+        <form action="" method="POST">
+            <h2>¡Cancela tu compra!</h2>
+            <div class="form-group col-sm-6 col-md-6 col-xl-5">
+                <img src="https://img.icons8.com/ios-filled/30/null/yandex-money.png"/>
+                <label for="Total" class="form-label">Monto Total a Pagar</label>
+                <input type="number" class="form-control" name="Total" id="Total">
+                
+            </div>
+            <div class="form-group col-sm-6 col-md-6 col-xl-5" id="titulo">
+                <img src="https://img.icons8.com/ios-filled/30/null/visa.png"/>
+                <img src="https://img.icons8.com/ios-filled/30/null/paypal.png"/>
+                <img src="https://img.icons8.com/ios-filled/30/null/mastercard.png"/>
+                <label for="optTipo">Metodo de pago</label>
+                <select class="form-select" name="optMetodoPg" id="optMetodoPg">
+                    <optgroup label="ListaP">
+                        <option value="0">Seleccione</option>
+                        <option value="1">Visa</option>
+                        <option value="2">Mastercad</option>
+                        <option value="3">Pay pay</option>
+                        <option value="4">Mach</option>
+                        <option value="5">Tenpo</option>
+                        <option value="6">Otro</option>
+                    </optgroup>
+                </select><br>
+                <div id="Vmetodo" class="error">*Obligatorio</div>
+            </div>
+            <div class="form-group col-sm">
+                <input class="btn btn-primary" type="button" name="btnComprar" value="Confirmar Pago" id="BtnComprar">
+                <img src="https://img.icons8.com/external-phatplus-solid-phatplus/64/null/external-help-authentication-phatplus-solid-phatplus.png"/>
+            </div>
+        </form>
+    </div>
+        
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+body{
+    background-image: url(../IMG/Imagen_fondo.jpg);
+}
+
+#carta1{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+}
+
+#imagen1{
+    width: 285px;
+    height: 250px;
+}
+
+header{
+    margin-right: 0px;
+}
+
+
+.nav-link{
+    color: white;
+}
+
+h5{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    margin-top:75px;
+    color: white;
+}
+
+#empresa{
+    color: white;
+}
+
+i{
+    margin-left: 50px;
+}
+
+.container-fluid{
+    margin-left: 80px;
+}

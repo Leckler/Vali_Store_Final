@@ -1,0 +1,29 @@
+body{
+    background-image: url(../IMG/Imagen_fondo.jpg);
+}
+
+
+.nav-link{
+    color: white;
+}
+
+
+
+i{
+    margin-left: 50px;
+}
+
+#Equipo{
+    color:white;
+
+}
+
+#letra{
+    font-style: oblique;
+    color:beige;
+}
+
+#letra1{
+    font-style: oblique;
+    margin-bottom: 30px;
+}

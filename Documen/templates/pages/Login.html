@@ -1,0 +1,47 @@
+  {% extends 'pages/Encabezado.html' %}
+
+  {% block contenido %}
+  <head>
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'documento/(CSS)/Login.css' %}">
+  </head>
+  <body>
+    <div class="container">
+        <div class="raw">
+            <h3>Tu seguridad nos importa <br> por favor verifica tu identidad con nosotros</h3>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <fieldset>
+                    <legend>Inicio de sesion</legend>
+                    <div class="form-group col-12">
+                        <label for="nombre" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre"
+                        placeholder="Ingrese usuario">
+                        <div id="Lnombre" class="error">Requiere un nombre</div>
+                    </div>
+                    <div class="form-group col-12">
+                        <label for="clave" class="form-label">Clave</label>
+                        <input type="password" class="form-control" name="clave" id="clave"
+                        placeholder="Ingrese clave">
+                        <div id="Lclave" class="error">Requiere una clave</div>
+                    </div>
+                    <div class="form-group col-12">
+                        <input type="submit" class="btn btn-primary" name="btnAcceder" value="Acceder" id="boton2">
+                    </div>
+                    <div>
+                        <a href="{% url 'Registrar' %}" id="aviso2" target="_blank">¿No tienes una cuenta?</a>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="alerta" class="alert alert-danger col-md-3 " hidden>
+                <h6 id="resultado">Resultado</h6>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="{% static 'documento/(Jquery)/Login.js' %}"></script>
+
+{% endblock %}

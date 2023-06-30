@@ -1,0 +1,57 @@
+{% extends 'pages/Encabezado.html' %}
+
+{% block contenido %}
+
+<head>
+    <title>Prueba</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'documento/(CSS)/Fragmentos.css' %}">
+</head>
+
+<!--Como no se obtuve problemas con imagenes propuse colocar un gif de carga mientras tanto-->
+<body>
+  <div class="container-fluid">
+    <legend>Nuestros Productos en STOCK DISPONIBLE</legend>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div class="raw">
+        {% for x in productos %}
+        <div class="col-3">
+          <div class="card" style="width: 18rem;">
+            <img src="{% static 'documento/IMG/loading.gif' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              {% if compra1 %}
+              <h5 class="card-title" id="nombreP" name="nombreP">{{x.nombre}}</h5>
+              {% endif %}
+              <p class="card-text">{{x.descripcion}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Color: {{x.color}}</li>
+              <li class="list-group-item">Material: {{x.material}}</li>
+              <li class="list-group-item">Extension/Contenido: {{x.longitud}}</li>
+              <li class="list-group-item" id="stock" name="stock">Stock disponible: {{x.stock}}</li>
+            </ul>
+            <div class="card-body">
+              <input type="submit" class="btn-primary" name="comprar" value="Comprar">
+              <a href="#" class="card-link" id="precio" name="precio">$ {{x.precio}}</a>
+            </div>
+          </div>
+        </div>
+        {%endfor%}
+      </div>
+
+    </form>
+    
+    
+  </div>
+  
+
+
+  
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="{% static 'documento/(Jquery)/Fragmentos.js' %}"></script>
+{% endblock %}
+
+

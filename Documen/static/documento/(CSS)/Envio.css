@@ -1,0 +1,57 @@
+body{
+    background-image: url(../IMG/Imagen_fondo.jpg);
+}
+
+
+.nav-link{
+    color: white;
+}
+
+
+#empresa{
+    color: white;
+}
+
+i{
+    margin-left: 50px;
+}
+
+
+form{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.container-fluid{
+    margin-top: 10px;
+}
+
+
+legend{
+    color: white;
+}
+
+.form-group{
+    padding: 5px;
+}
+
+
+.form-group{
+    padding: 5px;
+}
+
+
+.error{
+    font-style: oblique;
+}
+
+
+label{
+    color:white;
+}
+
+#espacio{
+    margin-top: 50px;
+}
+

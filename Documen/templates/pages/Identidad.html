@@ -1,0 +1,64 @@
+{% extends 'pages/Encabezado.html' %}
+
+{% block contenido %}
+
+<head>
+    <title>Identidad</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'documento/(CSS)/Identidad.css' %}">
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <div class="raw">
+            <div class="col-sm-8 col-md-12 col-lg-12 col-xl-12" id="Equipo">
+                <H1 id="letra1">Informacion importante</H1>
+                <h3 id="letra">Nuestra motivacion y Modelo de negocio</h3>
+                <p>Somos una fundacion sin fines de lucro, encargada de entregar los mejores productos para mascotas <br>
+                de la ciudad de santiago, nuestro modelo de negocio consiste en la venta de accesorios para nuestros peludos <br>
+                entre ellos se encuentran las correas, los identificadores y juguetes.
+                Sin embargo tambien tenemos algunas opciones <br> adicionales para nuestros cliente
+                con mascotas pocos comunes.</p>
+            </div>
+        </div>
+        <div class="raw">
+            <div class="col-sm-6 col-md-9 col-lg-9 col-xl-7" id="Equipo">
+                <h3 id="letra">Nuestro Equipo</h3>
+                <p>Nuestro equipo esta conformado por:</p>
+                <ul class="list-group">
+                    <li class="list-group-item">Jefe de operaciones: Jose Luis Sandoval Echeverria</li>
+                    <li class="list-group-item">Administradora de finanzas: Michelle Andrea Ramirez Beas</li>
+                    <li class="list-group-item">Servicio de atencion al cliente: Laura Javiera Godoy Andrade</li>
+                    <li class="list-group-item">Jefe de marketing: Lucas Ignacio Mendez Artigas</li>
+                    <li class="list-group-item">Encargado de logistica: Diego Antonio Torres Halk</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="raw">
+            <div class="col-sm-6 col-md-8 col-lg-10 col-xl-12" id="Equipo">
+                <h2 id="letra">Mision</h2>
+                <p>Nuestra mision como negocio es poder usar nuestras ganancias 
+                para ayudar a construir mas casas para perros y gatos <br>otorgar 
+                mas alimentos a los multiples hogares de mascotas dentro y fuera 
+                de la region metropolitana, ya sea norte,<br> centro, sur o incluso en 
+                la fria magallanes, nuestras ganas de aportar a este bien es inigualable.
+                </p>
+                <p>Solo para que te des una idea existen mas de 10.000 mascotas que no tienen
+                    comida todos los dias <br>son abandonados e incluso arrojados a la basura
+                    por esa razon es nuestro deber moral hacer algo por ellos <br>
+                    y contigo este fin es posible.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+</body>
+{% endblock %}

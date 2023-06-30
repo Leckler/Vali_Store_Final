@@ -1,0 +1,238 @@
+{% extends 'pages/Encabezado.html' %}
+
+{% block contenido %}
+
+<head>
+    <title>Fragmentos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'documento/(CSS)/Fragmentos.css' %}">
+</head>
+
+
+<body>
+    <div class="container-fluid">
+      <legend>Nuestros Productos en STOCK DISPONIBLE</legend>
+        <div class="raw">
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'documento/IMG/collar_cafe.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Collar de perro</h5>
+                      <p class="card-text">Un bonito collar para tu mascota, suave, resistente y ligero, perfecto tu compañero perruno</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Color: Cafe</li>
+                      <li class="list-group-item">Material: Cuero sintetico</li>
+                      <li class="list-group-item">Talla: S</li>
+                    </ul>
+                    <div class="card-body">
+                      <a href="#" class="btn-primary">Añadir al carrito</a>
+                      <a href="#" class="card-link" id="precio">5000</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'documento/IMG/correa de perro.webp' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Correa de perro</h5>
+                      <p class="card-text">Una correa de gran firmeza y resistencia, tiene un agarre suave que evita tirones violentos</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Color: Azul</li>
+                      <li class="list-group-item">Material: Nylon</li>
+                      <li class="list-group-item">Largo: 2 metros</li>
+                    </ul>
+                    <div class="card-body">
+                      <a href="#" class="card-link">Añadir al carrito</a>
+                      <a href="#" class="card-link" id="precio">Precio: $5.000</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'documento/IMG/Juguete de perro.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pelota lanzadora</h5>
+                      <p class="card-text">Una pelota para jugar con tu mejor amigo, lanzala por los aires y espera su regreso con sonrisas</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Color: Amarillo</li>
+                      <li class="list-group-item">Material: Plastico Resistente</li>
+                      <li class="list-group-item">Tamaño: Pequeño</li>
+                    </ul>
+                    <div class="card-body">
+                      <a href="#" class="card-link">Añadir al carrito</a>
+                      <a href="#" class="card-link" id="precio">Precio: $2.500</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'documento/IMG/shampoo perro.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Shampoo de perro</h5>
+                      <p class="card-text">Un shampoo antipulgas para tu mascota, disfruta con su aroma a menta avellanada</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Aroma: Menta|Avellana</li>
+                      <li class="list-group-item">Cantidad: 500ml</li>
+                      <li class="list-group-item">Textura: Cremosa</li>
+                    </ul>
+                    <div class="card-body">
+                      <a href="#" class="card-link">Añadir al carrito</a>
+                      <a href="#" class="card-link" id="precio">Precio: $4.000</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+              <div class="card" style="width: 18rem;">
+                  <img src="{% static 'documento/IMG/juguete de gato.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Juguete para gato</h5>
+                    <p class="card-text">Diviertete con tu gato con este juguete estilo pez, arrojalo y observa como lo atrapa</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Color: Azul platino</li>
+                    <li class="list-group-item">Material: Caucho</li>
+                    <li class="list-group-item">Forma: Pescado</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Añadir al carrito</a>
+                    <a href="#" class="card-link" id="precio">Precio: $3.500</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card" style="width: 18rem;">
+                  <img src="{% static 'documento/IMG/collar de gato.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Collar de gato</h5>
+                    <p class="card-text">Un bonito collar para que le regales a tu gato, añade un colgante y anota su nombre</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Color: Rosado</li>
+                    <li class="list-group-item">Material: Tela sintetica</li>
+                    <li class="list-group-item">Talla: M</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Añadir al carrito</a>
+                    <a href="#" class="card-link" id="precio">Precio: $2.500</a>
+                  </div>
+              </div>
+             </div>
+            <div class="col-3">
+              <div class="card" style="width: 18rem;">
+                <img src="{%static 'documento/IMG/Juego_gato.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Juguete para arañar</h5>
+                    <p class="card-text">Juguete perfecto para los gatos que les gusta arañar tus sillones y almohadas, incluye pelota</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Color: Beige</li>
+                    <li class="list-group-item">Material: Lana</li>
+                    <li class="list-group-item">Tamaño: 100x20</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Agregar al carrito</a>
+                    <a href="#" class="card-link" id="precio">Precio: $8.200</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card" style="width: 18rem;">
+                  <img src="{% static 'documento/IMG/arnes_gatuno.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Arnes para gatos</h5>
+                    <p class="card-text">Un arnes firme perfecto para pasear a tu gato por el parque, gran agarre y material de calidad</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Color:Negro</li>
+                    <li class="list-group-item">Material:Nylon Ultra</li>
+                    <li class="list-group-item">Tamaño: Mediano</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Añadir al carrito</a>
+                    <a href="#" class="card-link" id="precio">Precio: $5.000</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'documento/IMG/pecera.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Pecera</h5>
+                  <p class="card-text">Una pecera transparente de tamaño pequeño, apta para peces dorados, tropicales y koi</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Color: Transparente</li>
+                  <li class="list-group-item">Material: Vidrio</li>
+                  <li class="list-group-item">Forma: Esferoide</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Añadir al carrito</a>
+                  <a href="#" class="card-link" id="precio">Precio: $10.000</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'documento/IMG/comida de tortuga.jpg' %}" class="card-img-top" alt="..."><div class="card-body">
+                  <h5 class="card-title">Comida de tortuga</h5>
+                  <p class="card-text">Comida de tortuga hecha a base de plantas y helechos del rio, ideales para su nutricion</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Ingredientes: Helechos</li>
+                  <li class="list-group-item">Contenido: 700 gr</li>
+                  <li class="list-group-item">Vencimiento: 04-06-2025</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Añadir al carrito</a>
+                  <a href="#" class="card-link" id="precio">Precio: $6.000</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'documento/IMG/jaula de hamster.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Jaula de hamster</h5>
+                  <p class="card-text">Gran jaula para tu pequeño amigo roedor, contiene una gran cantidad de toboganes</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Color: Multiple</li>
+                  <li class="list-group-item">Material: Acero inox</li>
+                  <li class="list-group-item">Tamaño: Grande</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Añadir al carrito</a>
+                  <a href="#" class="card-link" id="precio">Precio: $15.000</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'documento/IMG/prision_conejo.jpg' %}" class="card-img-top" alt="...">
+                <br><br><br><br>
+                <div class="card-body">
+                  <h5 class="card-title">Jaula de conejo</h5>
+                  <p class="card-text">Jaula para conejos de gran capacidad, puede almacenar hasta 2 conejos con comodidad</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Color: Gris</li>
+                  <li class="list-group-item">Material: Plastico reforzado</li>
+                  <li class="list-group-item">Tamaño: Grande</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Añadir al carrito</a>
+                  <a href="#" class="card-link" id="precio">Precio: $22.500</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="{% static 'documento/(Jquery)/Fragmentos.js' %}"></script>
+{% endblock %}
+

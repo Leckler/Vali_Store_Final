@@ -1,0 +1,44 @@
+{% extends 'pages/Encabezado.html' %}
+
+{% block contenido %}
+
+<head>
+    <title>Perfil</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'documento/(CSS)/Perfil.css' %}">
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <div class="raw" id="dato">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h3>Informacion personal</h3>
+
+
+            </div>
+        </div>
+        <div class="raw" id="registro">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h6>Nombre de usuario:</h6>
+                <h6>Fecha de registro:</h6>
+                <h6>Total compras realizadas:</h6>
+            </div>
+        </div>
+        <div class="raw">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h3 id="tablaR">Tabla de registros</h3>
+                <button id="MostrarH">Mostrar resultados</button>
+                <table id="crear"></table>
+                <!-- Aqui se pretende enlazar una base de datos para mostrar ID/DOMICILIO/ESTADO/
+                    FECHACOMPRA/FECHAENTREGA, se intento con xml para dar una muestra pero no me funciono
+                    de todos modos requiero conectarlo a una base de datos<-->
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="{% static 'documento/(Jquery)/Perfil.js' %}"></script>
+{% endblock %}

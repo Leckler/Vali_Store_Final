@@ -1,0 +1,37 @@
+body{
+    background-image: url(../IMG/Imagen_fondo.jpg);
+}
+
+i{
+    margin-left: 50px;
+}
+
+.nav-link{
+    color: white;
+}
+
+.card{
+    margin-top: 30px;
+}
+
+.raw{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.container-fluid{
+    margin-top:10px;
+}
+
+#precio{
+    color:black;
+    font-style:italic;
+}
+legend{
+    font-style: oblique;
+    color: white;
+}
+
+#almacen{
+    text-align: end;
+}

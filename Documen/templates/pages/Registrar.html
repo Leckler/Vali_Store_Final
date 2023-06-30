@@ -1,0 +1,104 @@
+{% extends 'pages/Encabezado.html' %}
+
+{% block contenido %}
+<head>
+    <title>Pagina de registro</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'documento/(CSS)/Registrar.css' %}">
+  </head>
+<body>
+    <div class="container-fluid">
+        <div class="raw">
+            <legend>Formulario de inscripcion</legend>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-group col-sm-8">
+                    <label for="pnombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" id="pnombre" 
+                    placeholder="Ingrese nombre" required>
+                    <div id="Verify1" class="error">Este campo no puede estar vacio</div>
+                </div>
+                <div class="form-group col-sm-8">
+                    <label for="apaterno" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" name="apellido" id="apaterno"
+                    placeholder="Ingrese apellido" required>
+                    <div id="Verify2" class="error">Este campo no puede estar vacio</div>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="edad" class="form-label">Edad</label>
+                    <input type="number" class="form-control" name="edad" id="edad"
+                    placeholder="..." required>
+                    <div id="Verify3" class="error">Debe ser +17</div>
+                </div>
+                <div class="form-group col-sm-12 col-md-9">
+                    <label for="correo" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" name="email" id="correo"
+                    placeholder="Ingrese correo electronico" required>
+                    <div id="Verify4" class="error">Correo debe ser alfanumerico e incluir @</div>
+                </div>
+                <div class="form-group col-sm-8">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="tel" class="form-control" name="telefono" id="telefono"
+                    placeholder="Ingrese telefono celular +56" required>
+                    <div id="Verify5" class="error">Telefono debe tener 9 digitos</div>
+                </div>
+                <div class="form-group col-sm-8">
+                    <label for="optTipo">Genero</label>
+                    <select class="form-select" name="genero" id="optGenero" required>
+                        <optgroup label="Lista">
+                            <option value="0">Seleccione</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
+                            <option value="4">Prefiero no mencionarlo </option>
+                        </optgroup>
+                    </select>
+                    <div id="Verify6" class="error">*Obligatorio</div>
+                </div>
+                <div class="form-group col-sm-8">
+                    <label for="pass" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" name="clave" id="pass"
+                    placeholder="Ingrese una clave" required>
+                    <div id="Verify7" class="error">Debe incluir letras, numeros y especiales</div>
+                </div>
+                <div class="form-group col-sm-8">
+                    <label for="pass" class="form-label">Repetir Contraseña</label>
+                    <input type="password" class="form-control" name="clave1" id="pass2"
+                    placeholder="Ingrese nuevamente" required>
+                    <div id="Verify8" class="error">Ingrese nuevamente</div>
+                </div>
+                <div class="form-group col-sm-8">
+                    <label for="nombreU" class="form-label">Nombre usuario</label>
+                    <input type="text" class="form-control" name="nickname" id="nombreU"
+                    placeholder="Ingrese nombre de usuario">
+                    <div id="Verify9" class="error">*Opcional</div>
+                </div>
+                <div class="form-group col-sm-8">
+                    <label for="optEquipo">Equipo [opcional]</label>
+                    <select class="form-select" name="equipo" id="optEquipo">
+                        <optgroup label="ListaM">
+                            <option value="0">Seleccione</option>
+                            <option value="1">Administrativo</option>
+                            <option value="2">Usuario</option>
+                            <option value="3">Desarrollador</option>
+                        </optgroup>
+                    </select>
+                    <div id="Verify10" class="error">*Opcional</div>
+                </div>
+                <div class="form-group col-sm-2">
+                    <input class="btn btn-primary" type="submit" name="btnEnviar" value="Enviar" id="btnEnviar">
+                </div>
+                <div>
+                    <img src="https://img.icons8.com/ios-filled/100/null/german-shepherd.png"/>
+                </div>
+                {% csrf_token %}
+            </form>
+        </div>
+
+    </div>
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="{% static 'documento/(Jquery)/Registrar.js' %}"></script>
+{% endblock %}
+

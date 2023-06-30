@@ -1,0 +1,42 @@
+body{
+    background-image: url(../IMG/Imagen_fondo.jpg);
+}
+
+form{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-group{
+    padding: 5px;
+}
+
+
+.nav-link{
+    color: white;
+}
+
+
+i{
+    margin-left: 50px;
+}
+
+legend{
+    color: white;
+}
+
+label{
+    color:white;
+}
+
+.container-fluid{
+    margin-top: 10px;
+}
+
+.error{
+    font-style: oblique;
+}
+
+#btnEnviar{
+    margin-top: 40px;
+}

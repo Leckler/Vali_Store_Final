@@ -1,0 +1,50 @@
+{% extends 'pages/Encabezado.html' %}
+
+{% block contenido %}
+
+<head>
+    <title>Productos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'documento/(CSS)/Productos.css' %}">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <h2>Tenemos los mejores productos para tu mascota al mejor precio</h2>
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <h4>Caninos</h4>
+                <img src="{% static 'documento/IMG/collar_cafe.jpg' %}" class="img-thumbnail" alt="...">
+                <img src="{% static 'documento/IMG/correa de perro.webp' %}" class="img-thumbnail" alt="...">
+                <img src="{% static 'documento/IMG/Juguete de perro.jpg' %}" class="img-thumbnail" alt="...">
+                <img src="{% static 'documento/IMG/shampoo perro.jpg' %}" class="img-thumbnail" alt="...">
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <h4>Felinos</h4>
+                <img src="{% static 'documento/IMG/juguete de gato.jpg' %}" class="img-thumbnail" alt="...">
+                <img src="{% static 'documento/IMG/collar de gato.jpg' %}" class="img-thumbnail" alt="...">
+                <img src="{% static 'documento/IMG/Juego_gato.jpg' %}" class="img-thumbnail" alt="...">
+                <img src="{% static 'documento/IMG/arnes_gatuno.jpg' %}" class="img-thumbnail" alt="...">
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <h4>Otros</h4>
+                <img src="{% static 'documento/IMG/pecera.jpg' %}" class="img-thumbnail" alt="...">
+                <img src="{% static 'documento/IMG/comida de tortuga.jpg' %}" class="img-thumbnail" alt="...">
+                <img src="{% static 'documento/IMG/jaula de hamster.jpg' %}" class="img-thumbnail" alt="...">
+                <img src="{% static 'documento/IMG/prision_conejo.jpg' %}" class="img-thumbnail" alt="...">
+            </div>
+            <nav aria-label="Page navigation example" id="destino">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a class="page-link">-----]</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="{% url 'Prueba' %}" target="_blank">Descripcion completa</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">[-----</a>
+                  </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+{% endblock %}
