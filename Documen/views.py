@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from .forms import RegistroForm
 from .models import Registro,Suscrito,Producto,Login 
-from Documen.Carrito import Cart
+from Documen.Carrito import Carrito
 
 
 # Create your views here.
@@ -57,7 +57,7 @@ def Suscripcion(request):  #Aqui funciono pero solo con el usuario Luis
             return render(request, 'pages/Home.html',context)
         
 
-def Desuscripcion(request,pk):  #No funciona la desuscripcion
+def Desuscripcion(request,pk):  
     try:
         lista= Suscrito.objects.all()
         context= {"suscritos":lista}
@@ -138,28 +138,29 @@ def Carrito(request):
 #Restringir segun el acceso segun el tipo de usuario 
 #Enlazar el Login
 
+
 def agregar_producto(request, ID):
-    carrito = Cart(request)
-    producto = Producto.objects.get(id_producto = ID)   #Estos eran crud que aprendi de videos pero no pude aplicarlos
-    carrito.add(producto)                               #Al carrito en una ventana modal 
-    return redirect("Fragmentos")
+    carrito = Carrito(request)
+    producto = Producto.objects.get(id_producto = ID)   
+    carrito.add(producto)                               
+    return redirect("Prueba")
 
 def eliminar_producto(request,ID):
-    carrito = Cart(request)
+    carrito = Carrito(request)
     producto = Producto.objects.get(id_producto = ID)
     carrito.remove(producto)
-    return redirect("Fragmentos")
+    return redirect("Prueba")
 
 def restar_producto(request, ID):
-    carrito = Cart(request)
+    carrito = Carrito(request)
     producto = Producto.objects.get(id_producto = ID)
     carrito.decrement(producto)
-    return redirect("Fragmentos")
+    return redirect("Prueba")
 
 def limpiar_carrito(request):
-    carrito = Cart(request)
+    carrito = Carrito(request)
     carrito.clear()
-    return redirect("Fragmentos")
+    return redirect("Prueba")
 
 
 
@@ -183,6 +184,14 @@ def Prueba(request):                          #Este tiene como proposito descont
 
 
 
+
+def userDel(request):
+    nombre1="Luis"
+    user = Registro.objects.get(nombre=nombre1)
+    if user is not None:
+        user.delete()
+        return render(request,'pages/Login.html')
+    
 
 
 

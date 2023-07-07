@@ -36,7 +36,7 @@ class Registro(models.Model):
 #A la variable nombre y no pude regresarla a la normalidad, ademas de que me impide seguir migrando datos
 
 class Producto(models.Model):
-    id_producto = models.AutoField(primary_key=True, db_column='idProducto', verbose_name='ID_Producto')
+    id_producto = models.AutoField(primary_key=True)
     nombre= models.CharField(max_length=20, blank= False, null= False)
     descripcion = models.TextField(max_length=100, blank= False, null= False)
     color= models.CharField(max_length=20, blank=False, null= False)
@@ -86,7 +86,7 @@ class Historial(models.Model):
     nombre = models.ForeignKey(Registro, on_delete=models.CASCADE, db_column='idNombre')
     cantidad_total = models.PositiveIntegerField(validators=[MaxValueValidator(9999999999)],blank=False, null = False, default=0)
     valor_total = models.PositiveIntegerField(validators=[MaxValueValidator(9999999999)],blank=False, null = False, default=0)
-    fecha_registro = models.DateField(blank=False, null=False)
+    fecha_registro = models.DateField(blank=False, null=False,auto_now_add=True)
     estado = models.CharField(max_length=12,blank=True, null=True)
 
     def __str__(self):

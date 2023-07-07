@@ -1,40 +1,30 @@
 Notas de progreso
 
-Positivas 
 
--Se logro realizar un Login funcional con los registros de la BD
--Se lograron almacenar las suscripciones con el nombre Luis clave 12345678
--Se lograron usar los for correctamente para listar los productos en BD reduciendo codigo en Prueba.html
--Se lograron crear los modelos de tabla (Registro,Login,Producto,Suscrito,Envio,Pago)
--Se lograron colocar correctamente los url para redireccionar paginas vista usuario
--Se logro adaptar un solo NAV general a traves de un block content
+Ultimo Avance
 
+-Se logro resolver el error UNIQUE ID que aparecia al momento de realizar el migrate
+usando un comando py manage.py --fake, el aviso de error ya no es visible pero de igual manera
+en el admin de django aun no me fue posible visualizar las ultimas tablas del modelo respectivo, ya
+que el error NoneType Iteration sigue activo y no me permite abrir la vista admin.
 
+-Se añadieron al admin.py las conexiones con los modelos de base de datos de (Envio,Pago e Historial)
 
-Negativas 
+-Se realizaron ajustes entre el Views y el carrito.html intentando unirlo
 
--No se logro hacer una desuscripcion totalmente funcional pero el codigo esta
-
--No se logro hacer funcional el proceso de compra con el backend
-(*Durante el proceso intente hacer muchas formas de crud en la compra pero ninguna me ha logrado funcionar
-almacenados en Carrito.py, Views, Carpeta CRUD etc. Se intento tambien crear una ventana modal
-al no servir el include y tampoco pude llevarlo a cabo, por ultimo se intento que el boton comprar
-en Prueba.html al momento de presionarse automaticamente modificara el stock y le restara -1,
-no arroja error pero no resta*)
-
--Sin el proceso de venta realizado el historial listar se ve disminuido en objetos
+-A diferencia de la entrega 3 este no podra ser abierto porque el cmd arrojara error NoneType 
+pero tengo la certeza que de resolverse ese problema efectivamente
+se podra visualizar correctamente el CRUD y Carrito.
 
 
-Adicionales
+Conclusiones
 
--Antes tenia errores de current/path, esos problemas eran producto del cache basura almacenado
-pero se solucionan aplicando el link de runserver en google chrome incognito
+-Se sospecha que la causa del error Nonetype se encuentra en el Prueba.html relacionado
+con el catalogo especificamente en el FOR porque el carrito.html y carrito.py no presentan solucion al problema al ser eliminados,
+pienso que al intentar cambiar la llave primaria la vez anterior esto altero la ubicacion de id y quedo un objeto
+tipo None que interfiere en el CRUD
 
--Si hay errores de migraciones es producto de que quise cambiar la llave foranea en el modelo de Producto
-
--Mi admin de django tiene un theme django-interface , por lo que es posible que cmd se lo solicitara
-
--Si necesita verificar mi admin mi nombre de usuario es Leckler y mi contraseña 2028853140Nt
+-Muchas gracias por las clases, se logro aprender bastante y le deseo unas buenas vacaciones de invierno, Me despido.
 
 
 

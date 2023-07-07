@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Login,Registro,Producto,Suscrito
+from .models import Login,Registro,Producto,Suscrito,Envio,Pago,Historial
 
 # Register your models here.
 
@@ -12,4 +12,7 @@ admin.site.register(Login, LoginUsuario)
 admin.site.register(Registro)
 admin.site.register(Producto)
 admin.site.register(Suscrito)
+admin.site.register(Envio)
+admin.site.register(Pago)
+admin.site.register(Historial)
 

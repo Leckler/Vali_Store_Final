@@ -1,52 +1,49 @@
-class Cart:
+class Carrito:
     def __init__(self,request):
         self.request = request
         self.session = request.session
-        cart = self.session.get("cart")
-        if not cart:
-            cart = self.session["cart"] = {}
-        self.cart = cart
+        carrito = self.session.get("carrito")
+        if not carrito:
+            self.session["carrito"] = {}
+            self.carrito = self.session["carrito"]
     
 
     def add(self,producto):
-        if str(producto.id_producto) not in self.cart.keys():
-            self.cart[producto.id_producto] = {
+        id = str(producto.id_producto)
+        if id not in self.carrito.keys():
+            self.carrito[id] = {
                 "ID" : producto.id_producto,
                 "nombre": producto.nombre,
-                "cantidad" : producto.stock,
-                "precio": str(producto.precio),
+                "cantidad" : 1,
+                "precio": producto.precio,
             }
         else:
-            for key, value in self.cart.items():
-                if key == str(producto.id_producto):
-                    value["cantidad"] = value["cantidad"] + 1
-                    break
+            self.carrito[id]["cantidad"] += 1
+            self.carrito[id]["precio"] += producto.precio
         self.save()
 
+
     def save(self):
-        self.session["cart"] = self.cart
+        self.session["carrito"] = self.carrito
         self.session.modified = True
 
     def remove(self,producto):
-        ID = str(producto.id_producto)
-        if ID in self.cart:
-            del self.cart[ID]
+        id = str(producto.id_producto)
+        if id in self.carrito:
+            del self.carrito[id]
             self.save()
     
     def decrement(self,producto):
-        for key, value in self.cart.items():
-            if key == str(producto.id_producto):
-                value["cantidad"] = value["cantidad"] - 1
-                if value["cantidad"] < 1:
-                    self.remove(producto)
-                else:
-                    self.save()
-                break
-            else:
-                print("El producto no existe en carrito")
+        id = str(producto.id_producto)
+        if id in self.carrito.keys():
+            self.carrito[id]["cantidad"] -=1
+            self.carrito[id]["precio"] -= producto.precio
+            if self.carrito[id]["cantidad"] <=0:
+                self.remove(producto)
+                self.save()
     
     def clear(self):
-        self.session["cart"] = {}
+        self.session["carrito"] = {}
         self.session.modified = True
 
 

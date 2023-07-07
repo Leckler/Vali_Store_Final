@@ -32,13 +32,15 @@
               <li class="list-group-item" id="stock" name="stock">Stock disponible: {{x.stock}}</li>
             </ul>
             <div class="card-body">
-              <input type="submit" class="btn-primary" name="comprar" value="Comprar">
+              <a href="{% url 'Add' x.id_producto %}" class="btn btn-primary">Agregar al carrito</a>
               <a href="#" class="card-link" id="precio" name="precio">$ {{x.precio}}</a>
             </div>
           </div>
         </div>
         {%endfor%}
       </div>
+      {% include "carrito.html" %} 
+      
 
     </form>
     
